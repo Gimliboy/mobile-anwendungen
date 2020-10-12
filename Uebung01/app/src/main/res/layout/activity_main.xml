@@ -75,19 +75,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test"/>
+                android:text="@string/first_line"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test 2 2 2asdasdasdasdasdasd"/>
+                android:text="@string/second_line"/>
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Test 3 3 3 3 3"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Test 3 3 3 3 3sd"/>
+                android:layout_height="wrap_content"
+                android:text="@string/third_line"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -96,7 +92,7 @@
         <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Lorem Ipsum asdoaskdokqwpeojedoqwcfpqcpowje"
+        android:text="@string/long_text"
         android:textAlignment="center"
         android:gravity="center_horizontal|bottom"/>
     </LinearLayout>
