@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Uebung01</string>
+    <string name="heading">Ist Baby Yoda süß?</string>
+    <string name="first_line">Englisch</string>
+    <string name="second_line">Und Deutsch</string>
+    <string name="third_line">Und sogar Russisch</string>
+    <string name="all_line">So viele Sprachen unterstütz. Fantastisch!</string>
+    <string name="left_button">Ja</string>
+    <string name="right_button">Nein</string>
+    <string name="long_text">Das Kind (genannt Baby Yoda) wurde um 41 VSY geboren und war im Alter von fünfzig Jahren anscheinend noch ein Säugling,
+        welcher auf einer Anlage auf dem Planeten Arvala-7 von Nikto-Söldnern festgehalten wurde.
+        Der imperiale Auftraggeber hatte einen mandalorianischen Kopfgeldjäger damit beauftragt,
+        das Kind aus der Anlage zu holen und dem Klienten zu überbringen.
+        Auf dem Rückweg musste der nur als „Mandalorianer“ bekannte Kopfgeldjäger jedoch feststellen,
+        dass wichtige Teile seines Raumschiffes, der Razor Crest, von Jawas des Wüstenplaneten gestohlen wurden,
+        weswegen sie gemeinsam durch die Wüste zurück zur Ranch von Kuiil liefen</string>
+</resources>
