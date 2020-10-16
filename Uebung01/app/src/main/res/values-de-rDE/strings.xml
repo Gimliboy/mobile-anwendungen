@@ -14,4 +14,6 @@
         Auf dem Rückweg musste der nur als „Mandalorianer“ bekannte Kopfgeldjäger jedoch feststellen,
         dass wichtige Teile seines Raumschiffes, der Razor Crest, von Jawas des Wüstenplaneten gestohlen wurden,
         weswegen sie gemeinsam durch die Wüste zurück zur Ranch von Kuiil liefen</string>
+    <string name="popup_msg">Entscheidung beim letzten Mal:</string>
+    <string name="popup_msg_not_clicked">Noch keine Entscheidung getroffen</string>
 </resources>

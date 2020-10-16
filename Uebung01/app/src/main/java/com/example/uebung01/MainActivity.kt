@@ -30,10 +30,13 @@ class MainActivity : AppCompatActivity() {
     {
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
         val preString = sharedPreferences.getString("CLICKED_BUTTON", null);
+        // get popup msg in system language
+        val popupMsgClicked: String = getString(R.string.popup_msg);
+        val popUpMsgNotClicked: String = getString(R.string.popup_msg_not_clicked);
         if (preString != null)
-            Toast.makeText(this, "Clicked on last visit: $preString" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "$popupMsgClicked $preString" , Toast.LENGTH_SHORT).show();
         else
-            Toast.makeText(this, "No Button Clicked on last visit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, popUpMsgNotClicked, Toast.LENGTH_SHORT).show();
     }
     private fun saveDate(buttonText: String)
     {

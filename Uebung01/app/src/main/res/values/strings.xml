@@ -14,4 +14,6 @@
          On the way back, however, the bounty hunter, known only as the Mandalorian, discovered
          that important parts of his spaceship, the Razor Crest, were stolen by Jawas of the desert planet,
          so they walked back to Kuiils ranch through the desert</string>
+    <string name="popup_msg">Choice on last visit:</string>
+    <string name="popup_msg_not_clicked">No Button Clicked</string>
 </resources>
