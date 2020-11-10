@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Kiessling Paul Uebung2</string>
+    <string name="heading">Uebung Nummer 2</string>
+    <string name="left_text">hier steht der linke Text</string>
+    <string name="right_text">hier steht der rechte Text</string>
+    <string name="button_text">Bewertung überprüfen lassen</string>
+    <string name="heading_input">Geben Sie hier ihre Bewertung der App an: </string>
+    <string name="evaluation">Eingereichte Bewertung: </string>
+    <string name="correction">Leider ist die Bewertung falsch und sollte 10 Punkte umfassen</string>
+    <string name="evaluator_name">Bewertet von: </string>
+    <string name="evaluator_status">Mit dem akad. Status: </string>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    style="@style/father">
+
+        <TextView
+            android:id="@+id/heading_input_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/input_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_submit_ex_indent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/heading_input"/>
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@+id/btn_submit_ex_indent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heading_input_id"/>
+        <Button
+            android:id="@+id/btn_submit_ex_indent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_text"
+            style="@style/father"
+            app:layout_constraintLeft_toRightOf="@id/input_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/input_text"
+            android:onClick="sendEvaluation"/>
+
+        <TextView
+            android:id="@+id/header_multi_inputs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angaben zur bewertenden Person"
+            app:layout_constraintTop_toBottomOf="@id/input_text"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                android:hint="Name"
+            app:layout_constraintTop_toBottomOf="@id/header_multi_inputs"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/input_status"/>
+        <EditText
+            android:id="@+id/input_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                android:hint="Status"
+            app:layout_constraintLeft_toRightOf="@id/input_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/input_name"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_name"
+            app:layout_constraintBottom_toTopOf="@id/left_text_style1"
+            android:text="Send E-Mail"
+            android:onClick="sendMail"/>
+
+        <TextView
+            style="@style/father"
+            android:id="@+id/left_text_style1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/left_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/right_text_style1"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/right_text_style1"
+            style="@style/father"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/right_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/left_text_style1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            style="@style/child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/heading"
+            android:gravity="center_horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
