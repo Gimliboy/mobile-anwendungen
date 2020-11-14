@@ -1,0 +1,23 @@
+{
+    "studiengang": "Informationstechnik",
+    "jahrgang": "2018",
+    "kursKuerzel": "TINF18",
+    "studenten":
+    [
+        {
+            "name": "Willie Wonka",
+            "geschlecht": "maennlich",
+            "alter": 66
+        },
+        {
+            "name": "Jarvis Johnson",
+            "geschlecht": "maennlich",
+            "alter": 18
+        },
+        {
+            "name": "Brigitte Bohnenstange",
+            "geschlecht": "weiblich",
+            "alter": 22
+        }
+    ]
+}
