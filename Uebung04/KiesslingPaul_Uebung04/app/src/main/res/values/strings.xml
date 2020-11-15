@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">KiesslingPaul_Uebung04</string>
+    <string name="heading_greeting">Welcome back, %1$s</string>
+    <string name="heading_last_login">Last Login: %1$s</string>
+    <string name="year_duration">%1$d, %2$d</string>
+    <string name="menu_item_greet">let me greet you</string>
+    <string name="menu_item_switch_linear">Switch to linear Layout</string>
+    <string name="menu_item_switch_grid">Switch to Grid Layout</string>
 </resources>

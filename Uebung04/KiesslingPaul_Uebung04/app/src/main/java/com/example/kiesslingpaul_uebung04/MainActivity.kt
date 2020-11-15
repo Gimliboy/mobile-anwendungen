@@ -2,21 +2,19 @@ package com.example.kiesslingpaul_uebung04
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.service.autofill.TextValueSanitizer
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_movie.*
 import kotlinx.android.synthetic.main.item_movie.view.*
 import org.apache.commons.io.IOUtils
-import java.io.InputStream
 import java.nio.charset.Charset
-import java.nio.charset.StandardCharsets
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,15 +33,31 @@ class MainActivity : AppCompatActivity() {
         // init Recyclerview with list of movies
         val adapter_value = MyAdapter(parsedMovies)
         moviesRecyclerView.adapter = adapter_value
-        moviesRecyclerView.layoutManager = LinearLayoutManager(this)
+        moviesRecyclerView.layoutManager = GridLayoutManager(this, 2)
 
         // set the Header TextView's
-        findViewById<TextView>(R.id.userGreetingTextView).text = "Willkomen zurück, " + movieBib.user
-    findViewById<TextView>(R.id.lastLoginTextView).text = "Letzter Login: "+movieBib.LastLogin
+        findViewById<TextView>(R.id.userGreetingTextView).text = getString(R.string.heading_greeting, movieBib.user)
+        findViewById<TextView>(R.id.lastLoginTextView).text = getString(R.string.heading_last_login, movieBib.lastLogin)
+    }
+
+    // override functions for option menu
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    // define action for clicking on item
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+            R.id.announcer_btn -> Toast.makeText(this, "Hello there!", Toast.LENGTH_SHORT).show()
+            R.id.switch_to_grid -> moviesRecyclerView.layoutManager = GridLayoutManager(this, 2)
+            R.id.switch_to_linear -> moviesRecyclerView.layoutManager = LinearLayoutManager(this)
+        }
+        return true
     }
 }
 
-data class MovieBib(val user: String, val LastLogin: String, val movies: List<Movie>)
+data class MovieBib(val user: String, val lastLogin: String, val movies: List<Movie>)
 data class Movie(val title: String, val year: Int, val duration: Int, val imdbScore: Float, val synchronized: Boolean, val cast: List<String>)
 
 class MyAdapter(private val data_list: List<Movie>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
@@ -59,7 +73,7 @@ class MyAdapter(private val data_list: List<Movie>) : RecyclerView.Adapter<MyAda
         val currentItem = data_list[position]
         holder.myMovieTitle.text = currentItem.title
         holder.myMovieRating.text = currentItem.imdbScore.toString()
-        holder.myMovieDuration.text = currentItem.duration.toString()
+        holder.myMovieDuration.text = currentItem.year.toString() + ", " + currentItem.duration.toString()
         holder.myMovieCast.text = currentItem.cast.joinToString()
         if (currentItem.synchronized)
         {
