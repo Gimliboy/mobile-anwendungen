@@ -5,5 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <Button
+        android:id="@+id/btn_load_rnd_person"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_load_male_person"
+        android:text="load random person"/>
+    <Button
+        android:id="@+id/btn_load_male_person"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btn_load_rnd_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="load only male"/>
 
+    <TextView
+        android:id="@+id/full_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_load_male_person"
+        app:layout_constraintStart_toStartOf="@id/btn_load_male_person"
+        tools:text="title firstName lastName"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"/>
+    <TextView
+        android:id="@+id/location_street_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/full_name_text_view"
+        app:layout_constraintTop_toBottomOf="@id/full_name_text_view"
+        tools:text="number name"/>
+
+    <TextView
+        android:id="@+id/location_city_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/location_street_text_view"
+        app:layout_constraintTop_toBottomOf="@id/location_street_text_view"
+        tools:text="postcode name"/>
+    <TextView
+        android:id="@+id/location_state_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/location_city_text_view"
+        app:layout_constraintTop_toBottomOf="@id/location_city_text_view"
+        tools:text="state"/>
+    <TextView
+        android:id="@+id/location_country_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/location_state_text_view"
+        app:layout_constraintTop_toBottomOf="@id/location_state_text_view"
+        tools:text="country"/>
+    <ImageView
+        android:id="@+id/picture_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/full_name_text_view"
+        app:layout_constraintBottom_toBottomOf="@id/location_country_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

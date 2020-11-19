@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">KiesslingPaul_Uebung05</string>
+    <string name="full_name_string">%1$s %2$s %3$s</string>
+    <string name="location_street_string">%1$s %2$s</string>
+    <string name="location_city_string">%1$s %2$s</string>
+    <string name="location_state_string">%1$s</string>
+    <string name="location_country_string">%1$s</string>
 </resources>
